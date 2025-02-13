@@ -1,0 +1,17 @@
+# 音頻處理
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# API客戶端
+anthropic>=0.3.0
+
+# 用戶界面和系統交互
+pyperclip>=1.8.2
+
+# 語音識別（分開安裝）
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch
+git+https://github.com/openai/whisper.git
+
+# 最後安裝
+pynput>=1.7.6 

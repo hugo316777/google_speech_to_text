@@ -1,0 +1,227 @@
+#control-panel {
+    margin: 20px 0;
+}
+
+.control-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#start-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#start-btn:hover {
+    background-color: #45a049;
+}
+
+#stop-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+#stop-btn:hover {
+    background-color: #da190b;
+}
+
+#status {
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+}
+
+.control-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#output {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#output p {
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#output p.interim {
+    color: #666;
+    background-color: #f9f9f9;
+}
+
+#output p.final {
+    color: #000;
+    background-color: #f0f0f0;
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: #666;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.edit-icon:hover {
+    color: #2196F3;
+}
+
+.confirm-icon {
+    cursor: pointer;
+    color: #4CAF50;
+    margin-left: 10px;
+}
+
+.cancel-icon {
+    cursor: pointer;
+    color: #f44336;
+    margin-left: 10px;
+}
+
+.selection-tooltip {
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: none;
+    transform: translateY(-120%);
+}
+
+.selection-tooltip:hover {
+    background: #444;
+}
+
+.selection-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px 5px 0;
+    border-style: solid;
+    border-color: #333 transparent transparent;
+}
+
+/* 基本樣式 */
+body { 
+    padding: 20px; 
+    font-family: Arial, sans-serif; 
+}
+
+/* 控制面板布局 */
+.control-panel {
+    display: flex;
+    flex-direction: row;
+}
+
+.control-panel-left {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.control-panel-right {
+    flex: 1;
+    width: 300px;
+    margin-left: 20px;
+}
+
+/* Claude 相關元素樣式 */
+#claude-output {
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    text-wrap: unset;
+    padding: 10px;
+    line-height: 1.5;
+    text-align: start;
+}
+
+#claude-input {
+    width: 100%;
+    resize: vertical;
+}
+
+#previous-question {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    font-style: italic;
+    color: #6c757d;
+    min-height: 40px;
+}
+
+/* 統一按鈕基本樣式 */
+.control-btn, #submit, #clear {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: white;
+}
+
+/* 綠色按鈕 */
+.control-btn, #submit, #start-btn {
+    background-color: #4CAF50;
+}
+
+.control-btn:hover, #submit:hover, #start-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* 紅色按鈕 */
+#stop-btn, #clear {
+    background-color: #f44336;
+}
+
+#stop-btn:hover, #clear:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+}
+
+/* 按鈕禁用狀態 */
+.control-btn:disabled, #submit:disabled, #clear:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 按鈕點擊效果 */
+.control-btn:active, #submit:active, #clear:active {
+    transform: translateY(1px);
+    box-shadow: none;
+} 

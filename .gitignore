@@ -1,0 +1,36 @@
+# 環境變量
+# .env
+
+# 依賴
+node_modules/
+
+# 臨時文件
+*.webm
+*.wav
+*.mp3
+
+# 日誌
+*.log
+
+# 配置
+config/
+
+# 憑證檔案
+*.json
+!package.json
+!package-lock.json
+
+# 環境變數
+.env
+.env.*
+
+# 設定檔
+config.py
+
+
+document.txt
+
+# IDE 配置
+.vscode/
+.idea/ 
+
